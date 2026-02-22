@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Advanced Calculator</title>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #1e1e2f;
+            font-family: Arial, sans-serif;
+        }
+
+        .calculator {
+            background: #2c2c3e;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+<<<<<<< HEAD
+=======
+            box-shadow: 0 0 20px rgba(0,0,0,0.4);
+>>>>>>> feature
+        }
+
+        #display {
+            width: 100%;
+<<<<<<< HEAD
+            height: 40px;
+            margin-bottom: 10px;
+            font-size: 20px;
+            text-align: right;
+            padding: 5px;
+=======
+            height: 45px;
+            margin-bottom: 15px;
+            font-size: 22px;
+            text-align: right;
+            padding: 5px;
+            border-radius: 6px;
+            border: none;
+>>>>>>> feature
+        }
+
+        button {
+            width: 50px;
+            height: 40px;
+            margin: 5px;
+            font-size: 16px;
+            cursor: pointer;
+<<<<<<< HEAD
+=======
+            border-radius: 6px;
+            border: none;
+>>>>>>> feature
+        }
+
+        button:hover {
+            background-color: #555;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div class="calculator">
+    <input type="text" id="display" disabled>
+
+    <br>
+
+<<<<<<< HEAD
+    <!-- Scientific Buttons -->
+    <button onclick="square()">x²</button>
+    <button onclick="sqrt()">√</button>
+    <button onclick="clearDisplay()">C</button>
+=======
+    <!-- Top Row -->
+    <button onclick="square()">x²</button>
+    <button onclick="sqrt()">√</button>
+    <button onclick="percentage()">%</button>
+    <button onclick="deleteLast()">⌫</button>
+
+    <br>
+
+    <button onclick="clearDisplay()">C</button>
+    <button onclick="toggleSign()">±</button>
+    <button onclick="appendValue('.')">.</button>
+>>>>>>> feature
+    <button onclick="appendValue('/')">/</button>
+
+    <br>
+
+    <button onclick="appendValue('7')">7</button>
+    <button onclick="appendValue('8')">8</button>
+    <button onclick="appendValue('9')">9</button>
+    <button onclick="appendValue('*')">*</button>
+
+    <br>
+
+    <button onclick="appendValue('4')">4</button>
+    <button onclick="appendValue('5')">5</button>
+    <button onclick="appendValue('6')">6</button>
+    <button onclick="appendValue('-')">-</button>
+
+    <br>
+
+    <button onclick="appendValue('1')">1</button>
+    <button onclick="appendValue('2')">2</button>
+    <button onclick="appendValue('3')">3</button>
+    <button onclick="appendValue('+')">+</button>
+
+    <br>
+
+    <button onclick="appendValue('0')">0</button>
+<<<<<<< HEAD
+    <button onclick="calculate()">=</button>
+=======
+    <button onclick="calculate()" style="width:120px">=</button>
+>>>>>>> feature
+
+</div>
+
+<script>
+<<<<<<< HEAD
+=======
+
+    const display = document.getElementById("display");
+>>>>>>> feature
+
+    function appendValue(value) {
+        document.getElementById("display").value += value;
+    }
+
+    function clearDisplay() {
+        document.getElementById("display").value = "";
+    }
+
+<<<<<<< HEAD
+    function calculate() {
+        try {
+            document.getElementById("display").value =
+                eval(document.getElementById("display").value);
+=======
+    function deleteLast() {
+        display.value = display.value.slice(0, -1);
+    }
+
+    function toggleSign() {
+        if (display.value !== "") {
+            display.value = parseFloat(display.value) * -1;
+        }
+    }
+
+    function percentage() {
+        if (display.value !== "") {
+            display.value = parseFloat(display.value) / 100;
+        }
+    }
+
+    function calculate() {
+        try {
+            display.value = eval(display.value);
+>>>>>>> feature
+        } catch {
+            alert("Invalid Expression");
+        }
+    }
+
+    function square() {
+<<<<<<< HEAD
+        let value = document.getElementById("display").value;
+
+        if (value !== "") {
+            document.getElementById("display").value = value * value;
+=======
+        if (display.value !== "") {
+            display.value = Math.pow(parseFloat(display.value), 2);
+>>>>>>> feature
+        }
+    }
+
+    function sqrt() {
+<<<<<<< HEAD
+        let value = document.getElementById("display").value;
+
+        if (value !== "") {
+            document.getElementById("display").value = Math.sqrt(value);
+=======
+        if (display.value !== "") {
+            display.value = Math.sqrt(parseFloat(display.value));
+>>>>>>> feature
+        }
+    }
+
+</script>
+
+</body>
+</html>
